@@ -1,0 +1,826 @@
+<?xml version="1.0"?>
+<root>
+    <cms>
+        <pages>
+            <item>
+                <title>Shopcrown - Home Page</title>
+                <identifier>shopcrown_home_page</identifier>
+                <content><![CDATA[
+					<div>{{block type="catalog/product_list" template="catalog/product/home.phtml"}}</div>
+                	]]>
+				</content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			
+			<item>
+                <title>Shopcrown - 404 Page</title>
+                <identifier>shopcrown_404_page</identifier>
+                <content><![CDATA[
+					<div class="erro-container">
+						<h1>404</h1>
+						<div class="error-right">
+						<h2>Opps, you&rsquo;re lost.</h2>
+						<p>We can not find the page you&rsquo;re looking for. It there a typo in the url?</p>
+						<p><a onclick="history.go(-1);" href="#">Go back</a> to the previous page.</p>
+						<p>Use the search bar at the top of the page to search for your products.</p>
+						<button class="button" onclick="{{store url=""}}"><span><span>Store Home</span></span></button> <button class="button" onclick="{{store url="customer/account"}}"><span><span>My Account</span></span></button></div>
+					</div>
+                	]]>
+				</content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			
+			
+			<item>
+                <title>Shopcrown - about Page</title>
+                <identifier>shopcrown_about_page</identifier>
+                <content><![CDATA[
+					<div class="headingBox">
+						<h2 class="line_heading"><span>About Us</span></h2>
+						</div>
+						<div class="col3-set">
+						<div class="span4">
+						<p><img src="{{skin url='images/about-img01.jpg'}}" alt="Varien office pic" /></p>
+						<p><strong style="color: #000;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit.</strong></p>
+						<p>Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+						<p>Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus. Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi. Vestibulum sapien dolor, aliquet nec, porta ac, malesuada a, libero. Praesent feugiat purus eget est. Nulla facilisi. Vestibulum tincidunt sapien eu velit. Mauris purus. Maecenas eget mauris eu orci accumsan feugiat. Pellentesque eget velit. Nunc tincidunt.</p>
+						</div>
+						<div class="span4">
+						<p><img src="{{skin url='images/about-img03.jpg'}}" alt="Varien office pic" /></p>
+						<p><strong style="color: #000;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit.</strong></p>
+						<p>Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+						<p>Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus. Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi. Vestibulum sapien dolor, aliquet nec, porta ac, malesuada a, libero. Praesent feugiat purus eget est. Nulla facilisi. Vestibulum tincidunt sapien eu velit. Mauris purus. Maecenas eget mauris eu orci accumsan feugiat. Pellentesque eget velit. Nunc tincidunt.</p>
+						</div>
+						<div class="span4">
+						<p><img src="{{skin url='images/about-img02.jpg'}}" alt="Varien office pic" /></p>
+						<p><strong style="color: #000;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit.</strong></p>
+						<p>Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+						<p>Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus. Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi. Vestibulum sapien dolor, aliquet nec, porta ac, malesuada a, libero. Praesent feugiat purus eget est. Nulla facilisi. Vestibulum tincidunt sapien eu velit. Mauris purus. Maecenas eget mauris eu orci accumsan feugiat. Pellentesque eget velit. Nunc tincidunt.</p>
+						</div>
+					</div>
+                	]]>
+				</content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			
+			 <item>
+                <title>Store Page</title>
+                <identifier>store-page</identifier>
+                <content><![CDATA[
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal <span class="green">distribution</span> of letters, as opposed to using 'Content here, content here', making it look like readable English. Many <strong>desktop publishing</strong> packages and web page editors now use <span class="green">Lorem Ipsum </span>as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections <strong>1.10.32</strong> and <strong>1.10.33</strong> of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+		<h3>Many desktop publishing packages and web page editors now use:</h3>
+		<div class="f-block">
+		<div class="span6">
+		<ul class="store-listing">
+		<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+		<li>Praesent id turpis commodo, lobortis sapien eu, gravida augue.</li>
+		<li>Vivamus fermentum ipsum a egestas feugiat.</li>
+		<li>Pellentesque sit amet urna ut nibh mollis facilisis at nec risus.</li>
+		<li>Sed rutrum dolor vitae velit commodo, ac pulvinar dui pulvinar.</li>
+		<li>Sed tincidunt odio nec leo scelerisque luctus.</li>
+		<li>Maecenas eu quam ac nisi pharetra sollicitudin.</li>
+		<li>Mauris vestibulum eros in lacus aliquam, sit amet hendrerit nisl ultrices.</li>
+		<li>Cras sagittis mi nec nulla sollicitudin congue.</li>
+		<li>Nunc a metus scelerisque, vehicula orci venenatis, cursus quam.</li>
+		<li>Phasellus eu nulla gravida, volutpat neque in, euismod massa.</li>
+		<li>Proin mollis mauris in eleifend ornare.</li>
+		<li>Nunc nec ipsum et nisi sollicitudin viverra.</li>
+		</ul>
+		</div>
+		<div class="span6"><ol class="store-listing">
+		<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+		<li>Praesent id turpis commodo, lobortis sapien eu, gravida augue.</li>
+		<li>Vivamus fermentum ipsum a egestas feugiat.</li>
+		<li>Pellentesque sit amet urna ut nibh mollis facilisis at nec risus.</li>
+		<li>Sed rutrum dolor vitae velit commodo, ac pulvinar dui pulvinar.</li>
+		<li>Sed tincidunt odio nec leo scelerisque luctus.</li>
+		<li>Maecenas eu quam ac nisi pharetra sollicitudin.</li>
+		<li>Mauris vestibulum eros in lacus aliquam, sit amet hendrerit nisl ultrices.</li>
+		<li>Cras sagittis mi nec nulla sollicitudin congue.</li>
+		<li>Nunc a metus scelerisque, vehicula orci venenatis, cursus quam.</li>
+		<li>Phasellus eu nulla gravida, volutpat neque in, euismod massa.</li>
+		<li>Proin mollis mauris in eleifend ornare.</li>
+		<li>Nunc nec ipsum et nisi sollicitudin viverra.</li>
+		</ol></div>
+		</div>
+		<h3>Uncover many web sites still in their infancy</h3>
+		<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <a class="page-link" title="" href="#">randomised words</a> which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+		<p>The standard chunk of Lorem Ipsum used since the 1500s is <a class="page-link" title="" href="#">reproduced below</a> for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                	]]>
+				</content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+						
+      </pages>
+		
+        <blocks>
+		     
+			 <item>
+                <title>Custom Menu</title>
+                <identifier>customMenu</identifier>
+                <content><![CDATA[
+					<li class="level0 level-top parent customMenu"><a class="level-top" href="#"><span>Custom Menu</span></a>
+						<ul class="level0">
+						<li class="customMenu">
+						<div class="span3">
+						<div class="customBlock">
+						<h2>Custom Heading</h2>
+						<a title="" href="#"><img src="{{skin url='images/customblock.jpg'}}" alt="" /></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.</p>
+						</div>
+						</div>
+						<div class="span3">
+						<div class="customBlock">
+						<h2>Custom Heading</h2>
+						<a title="" href="#"><img src="{{skin url='images/customblock.jpg'}}" alt="" /></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.</p>
+						</div>
+						</div>
+						<div class="span3">
+						<div class="customBlock">
+						<h2>Custom Heading</h2>
+						<a title="" href="#"><img src="{{skin url='images/customblock.jpg'}}" alt="" /></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.</p>
+						</div>
+						</div>
+						<div class="span3">
+						<div class="customBlock">
+						<h2>Custom Heading</h2>
+						<a title="" href="#"><img src="{{skin url='images/customblock.jpg'}}" alt="" /></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.</p>
+						</div>
+						</div>
+						</li>
+						<li class="customMenu">
+						<div class="span4"><a title="" href="#"><img src="{{skin url='images/theam-img01.jpg'}}" alt="" /></a></div>
+						<div class="span4"><a title="" href="#"><img src="{{skin url='images/staticT3B.jpg'}}" alt="" /></a></div>
+						<div class="span4"><a title="" href="#"><img src="{{skin url='images/staticT3C.jpg'}}" alt="" /></a></div>
+						</li>
+						</ul>
+					</li>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>About links (Footer - About links)</title>
+                <identifier>about-us-links</identifier>
+                <content><![CDATA[
+					<h3>About us</h3>
+						<ul>
+						<li><a href="{{store direct_url="glamshop_about_page"}}">About Us</a></li>
+						<li><a href="{{store direct_url="customer-service"}}">Customer Service</a></li>
+						<li class="last privacy"><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+						<li><a href="{{store direct_url="discount"}}">Discount</a></li>
+						<li><a href="{{store direct_url="gift-cards"}}">Gift Cards</a></li>
+						<li><a href="{{store direct_url="my-favorite-products"}}">My favorite products</a></li>
+						</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Custom Tab (Custom tab on product page)</title>
+                <identifier>customTab</identifier>
+                <content><![CDATA[
+					<div class="customTab">
+						<div class="customLeft">
+						<h3>Custom HTML</h3>
+						<img src="{{skin url='images/customImgleft.jpg'}}" alt="Custom image" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nibh elit, a placerat mauris. Sed lobortis porta velit, ultrices mattis nisi accumsan vitae. In tempus laoreet dapibus. Aliquam in gravida est. Sed malesuada felis non ligula rutrum fringilla. Ut imperdiet velit ac ligula viverra quis facilisis quam ullamcorper. Aenean mauris libero, pharetra quis hendrerit vitae, scelerisque et leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet gravida aliquam. Nullam porttitor tellus id quam tincidunt aliquet. Ut scelerisque dictum metus, eget sodales eros semper et. Proin ultrices pharetra massa, et condimentum est fringilla sed. Sed gravida fermentum neque, ac accumsan nisl consequat et. Praesent quam dui, mattis id eleifend et, suscipit eu odio. Suspendisse a mauris orci, at tristique risus. Vestibulum pellentesque, risus at tincidunt lobortis, dui quam tincidunt ligula, vel tristique sapien velit at nisl.</p>
+						</div>
+						<div class="customRight">
+						<h3>Custom HTML</h3>
+						<img src="{{skin url='images/customImgright.jpg'}}" alt="Custom image" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nibh elit, a placerat mauris. Sed lobortis porta velit, ultrices mattis nisi accumsan vitae. In tempus laoreet dapibus. Aliquam in gravida est. Sed malesuada felis non ligula rutrum fringilla. Ut imperdiet velit ac ligula viverra quis facilisis quam ullamcorper. Aenean mauris libero, pharetra quis hendrerit vitae, scelerisque et leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet gravida aliquam. Nullam porttitor tellus id quam tincidunt aliquet. Ut scelerisque dictum metus, eget sodales eros semper et. Proin ultrices pharetra massa, et condimentum est fringilla sed. Sed gravida fermentum neque, ac accumsan nisl consequat et. Praesent quam dui, mattis id eleifend et, suscipit eu odio. Suspendisse a mauris orci, at tristique risus. Vestibulum pellentesque, risus at tincidunt lobortis, dui quam tincidunt ligula, vel tristique sapien velit at nisl.</p>
+						</div>
+					</div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Product Page static banner</title>
+                <identifier>product-static-box</identifier>
+                <content><![CDATA[
+					<div class="sidebarStatic"><img src="{{skin url='images/product_banner.jpg'}}" alt="" /></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Featured Block (On product page)</title>
+                <identifier>featured-block</identifier>
+                <content><![CDATA[
+					<ul class="featured-block f-block">
+						<li class="span3"><a title="" href="#"><em class="fa fa-truck"></em><span>Free Shipping above $50</span></a></li>
+						<li class="span3"><a title="" href="#"><em class="fa fa-usd"></em><span>Money back guarantee</span></a></li>
+						<li class="span3 safe-secure"><a title="" href="#"><em class="fa fa-shield"></em><span>Safe &amp; secure shopping</span></a></li>
+						<li class="span3"><a title="" href="#"><em class="fa fa-globe"></em><span>Worldwide Delivery</span></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>New Collections (On home page)</title>
+                <identifier>new-collections</identifier>
+                <content><![CDATA[
+					<ul class="f-fix">
+						<li><a title="" href="#"><img src="{{skin url="images/new-collections-img01.jpg"}}" alt="" /></a></li>
+						<li><a title="" href="#"><img src="{{skin url="images/new-collections-img02.jpg"}}" alt="" /></a></li>
+						<li><a title="" href="#"><img src="{{skin url="images/new-collections-img03.jpg"}}" alt="" /></a></li>
+						<li><a title="" href="#"><img src="{{skin url="images/new-collections-img04.jpg"}}" alt="" /></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>About Shopcrown</title>
+                <identifier>about-block</identifier>
+                <content><![CDATA[
+					<div class="headingBox">
+						<h2 class="line_heading"><span>About Shopcrown</span></h2>
+						</div>
+						<div class="block-content f-block">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci<br />tation ullamcorper suscipit lobortis nisl ut aliquip exea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in<br />vulputa jimmer dar bano te velit esse molestie consequat</p>
+						</div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Header-3 contact info</title>
+                <identifier>header-contact-info</identifier>
+                <content><![CDATA[
+					<div class="span4 toll-free">
+						<h2><em class="fa fa-phone-square">&nbsp;</em>0123-456789</h2>
+					</div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Social Media</title>
+                <identifier>social-link</identifier>
+                <content><![CDATA[
+					<h3>Follow Us</h3>
+						<ul class="social-media">
+						<li><a class="twitter" title="facebook" href="#"><em class="fa fa-facebook-square"></em><span>lorem</span></a></li>
+						<li><a class="facebook" title="twitter" href="#"><em class="fa fa-twitter-square"></em><span>lorem</span></a></li>
+						<li><a class="facebook" title="pinterest" href="#"><em class="fa fa-pinterest-square"></em><span>lorem</span></a></li>
+						<li><a class="rss" title="rss" href="#"><em class="fa fa-rss-square"></em><span>lorem</span></a></li>
+						<li><a class="linkedin" title="linkedin" href="#"><em class="fa fa-linkedin-square"></em><span>lorem</span></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Footer - My account</title>
+                <identifier>my-account</identifier>
+                <content><![CDATA[
+					<h3>My account</h3>
+					<ul>
+					<li><a href="{{store direct_url="store-page"}}">My orders</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My credit slips</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My addresses</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My personal info</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My vouchers</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My favorite products</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Footer - Information</title>
+                <identifier>Information</identifier>
+                <content><![CDATA[
+					<h3>Information</h3>
+					<ul>
+						<li><a href="{{store direct_url="store-page"}}">Specials</a></li>
+						<li><a href="{{store direct_url="store-page"}}">New products</a></li>
+						<li><a href="{{store direct_url="store-page"}}">Top sellers</a></li>
+						<li><a href="{{store direct_url="store-page"}}">Our stores</a></li>
+						<li><a href="{{store direct_url="store-page"}}">Contact us</a></li>
+						<li><a href="{{store direct_url="store-page"}}">Sitemap</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Footer - Contact info</title>
+                <identifier>info-box</identifier>
+                <content><![CDATA[
+					<h3>Contact Us</h3>
+					<ul class="footer-info-box">
+						<li class="hand">This is Photoshop's version of Lorem Ipsum.<br />Proin gravida nibh vel velit auctor aliquet.</li>
+						<li class="contact">661 662 663<br />156 147 158</li>
+						<li class="mail">info@example.com<br />office@example.com</li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Footer - Bottom Links</title>
+                <identifier>footer-bottom-links</identifier>
+                <content><![CDATA[
+					<ul class="footer-bottom-links">
+						<li><a href="store-page">Privacy Policy</a> |</li>
+						<li><a href="store-page">Store Locator</a> |</li>
+						<li class="last"><a href="store-page">Terms &amp; Conditions</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Static Product Page Links</title>
+                <identifier>static_links</identifier>
+                <content><![CDATA[
+					<ul class="f-block static-links">
+						<li><a title="30days" href="#"><span>30 days</span>Put your own content here</a></li>
+						<li><a title="30days" href="#"><span>30 days</span>Put your own content here</a></li>
+						<li><a title="30days" href="#"><span>30 days</span>Put your own content here</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Product Page Static Banner</title>
+                <identifier>productBanner</identifier>
+                <content><![CDATA[
+					<div class="block"><img src="{{skin url="images/sale-up-to-img.jpg"}}" alt="" /></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Product Custom Block On Right Side</title>
+                <identifier>product_custom_block</identifier>
+                <content><![CDATA[
+					<ul class="block pro-static-block">
+						<li>
+						<div class="f-left"><em class="fa fa-star">&nbsp;</em></div>
+						<p>There are many variations of passages</p>
+						</li>
+						<li>
+						<div class="f-left"><em class="fa fa-leaf">&nbsp;</em></div>
+						<p>There are many variations of passages</p>
+						</li>
+						<li>
+						<div class="f-left"><em class="fa fa-dot-circle-o">&nbsp;</em></div>
+						<p>There are many variations of passages</p>
+						</li>
+						<li>
+						<div class="f-left"><em class="fa fa-umbrella">&nbsp;</em></div>
+						<p>There are many variations of passages</p>
+						</li>
+						<li>
+						<div class="f-left"><em class="fa fa-gavel">&nbsp;</em></div>
+						<p>There are many variations of passages</p>
+						</li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Contact Detail</title>
+                <identifier>contactDetail</identifier>
+                <content><![CDATA[
+					<h2 class="legend">Address</h2>
+					<p><strong>Address:</strong> 8901 Marmora Road, Glasgow, D04 89GR</p>
+					<p><strong>Telephone:</strong> (800)2345-6789</p>
+					<p><strong>Fax:</strong> (800)2345-6789</p>
+					<p><strong>Mail:</strong> info@kateshop.com</p>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Contact page (bottom static block)</title>
+                <identifier>static-contact-block</identifier>
+                <content><![CDATA[
+					<div class="span4"><img src="{{skin url="images/static-block.jpg"}}" alt="" /></div>
+					<div class="span4"><img src="{{skin url="images/static-block.jpg"}}" alt="" /></div>
+					<div class="span4"><img src="{{skin url="images/static-block.jpg"}}" alt="" /></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Cart page static block (bottom static block)</title>
+                <identifier>cart-static-block</identifier>
+                <content><![CDATA[
+					<div class="span4"><img src="{{skin url="images/static-block.jpg"}}" alt="" /></div>
+					<div class="span4"><img src="{{skin url="images/static-block.jpg"}}" alt="" /></div>
+					<div class="span4"><img src="{{skin url="images/static-block.jpg"}}" alt="" /></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Footer links (About us)</title>
+                <identifier>footer-static-2</identifier>
+                <content><![CDATA[
+					<ul class="f-fix footer-bottom-links">
+						<li class="first"><a href="glamshop_about_page">About Us</a></li>
+						<li><a href="store-page">Privacy Policy</a></li>
+						<li><a href="store-page">Store Locator</a></li>
+						<li><a href="store-page">Terms &amp; Conditions</a></li>
+						<li><a href="store-page">Orders and Returns</a></li>
+						<li class="last"><a href="contacts">Contact Us</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>footer (How to Reach Us)</title>
+                <identifier>how-to-reach</identifier>
+                <content><![CDATA[
+					<h3>How to Reach Us</h3>
+					<p><em class="icon-home"></em> 8901 Marmora Road, Glasgow, D04 89GR</p>
+					<p><em class="icon-phone"></em> (800)2345-6789</p>
+					<p><strong>@</strong> info@kateshop.com</p>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Footer (Opening time)</title>
+                <identifier>opening-time</identifier>
+                <content><![CDATA[
+					<h3>Opening time</h3>
+					<p>Mon-Fri: .......................8.00 to 18.00</p>
+					<p>Sat: ................................. 9.00 to 18.00</p>
+					<p>Sun: ............................ 10.00 to 16.00</p>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Footer (Secure Payment)</title>
+                <identifier>secure-payment</identifier>
+                <content><![CDATA[
+					<h3>Secure Payment</h3>
+					<p><img src="{{skin url="images/payment.png"}}" alt="" /></p>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Promotional 3 bottom blocks  -(Bottom side with banner)</title>
+                <identifier>promotional_bottom_block_3</identifier>
+                <content><![CDATA[
+					<ul>
+						<li class="span4"><a title="" href="#"><img src="{{skin url="images/collection-img01.jpg"}}" alt="" /></a></li>
+						<li class="span4"><a title="" href="#"><img src="{{skin url="images/collection-img02.jpg"}}" alt="" /></a></li>
+						<li class="span4"><a title="" href="#"><img src="{{skin url="images/collection-img03.jpg"}}" alt="" /></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Promotional 3 Right blocks  -(Right side with banner)</title>
+                <identifier>promotional_right_block_3</identifier>
+                <content><![CDATA[
+					<ul>
+						<li class="f-fix"><a title="" href="#"><img src="{{skin url="images/collection-img01.jpg"}}" alt="" /></a></li>
+						<li class="f-fix"><a title="" href="#"><img src="{{skin url="images/collection-img02.jpg"}}" alt="" /></a></li>
+						<li class="f-fix"><a title="" href="#"><img src="{{skin url="images/collection-img03.jpg"}}" alt="" /></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Promotional 2 bottom blocks  -(Bottom side with banner)</title>
+                <identifier>promotional_bottom_block_2</identifier>
+                <content><![CDATA[
+					<ul>
+						<li class="span6"><a title="" href="#"><img src="{{skin url="images/sale-img2.jpg"}}" alt="" /></a></li>
+						<li class="span6"><a title="" href="#"><img src="{{skin url="images/new-arrivals2.jpg"}}" alt="" /></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Promotional 2 Right Blocks  -(Right side with banner)</title>
+                <identifier>promotional_right_block_2</identifier>
+                <content><![CDATA[
+					<ul>
+						<li><a title="" href="#"><img src="{{skin url="images/sale-img01.jpg"}}" alt="" /></a></li>
+						<li><a title="" href="#"><img src="{{skin url="images/new-arrivals.jpg"}}" alt="" /></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Block Slide Left</title>
+                <identifier>block-slide-left</identifier>
+                <content><![CDATA[
+					<div id="slideLeft">
+					     <!--slide one-->
+						<div class="innerSlids">
+						<div class="headingBox">
+						<h2 class="line_heading"><span>4 Types of sliders</span></h2>
+						</div>
+						<a href="#"> <img src="{{skin url=images/staticBanner2.jpg}}" alt="" /></a>
+						<p>All sliders are manageble by admin.</p>
+						</div>
+						<!--end slide one--> 
+						<!--slide two-->
+						<div class="innerSlids">
+						<div class="headingBox">
+						<h2 class="line_heading"><span>4 Types of sliders</span></h2>
+						</div>
+						<a href="#"> <img src="{{skin url=images/staticBanner3.jpg}}" alt="" /></a>
+						<p>All sliders are manageble by admin.</p>
+						</div>
+						<!--end slide two--> 
+						<!--slide three-->
+						<div class="innerSlids">
+						<div class="headingBox">
+						<h2 class="line_heading"><span>4 Types of sliders</span></h2>
+						</div>
+						<a href="#"> <img src="{{skin url=images/staticBanner4.jpg}}" alt="" /></a>
+						<p>All sliders are manageble by admin.</p>
+						</div>
+					<!--end slide three-->
+					</div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			
+			<item>
+                <title>Block Slide Right</title>
+                <identifier>block-slide-right</identifier>
+                <content><![CDATA[
+					<div id="slideRight">
+						<!--slide one-->
+						<div class="innerSlids">
+						<div class="headingBox">
+						<h2 class="line_heading"><span>4 Types of sliders</span></h2>
+						</div>
+						<a href="#"> <img src="{{skin url=images/staticBanner2.jpg}}" alt="" /></a>
+						<p>All sliders are manageble by admin.</p>
+						</div>
+						<!--end slide one--> 
+						<!--slide two-->
+						<div class="innerSlids">
+						<div class="headingBox">
+						<h2 class="line_heading"><span>4 Types of sliders</span></h2>
+						</div>
+						<a href="#"> <img src="{{skin url=images/staticBanner3.jpg}}" alt="" /></a>
+						<p>All sliders are manageble by admin.</p>
+						</div>
+						<!--end slide two--> 
+						<!--slide three-->
+						<div class="innerSlids">
+						<div class="headingBox">
+						<h2 class="line_heading"><span>4 Types of sliders</span></h2>
+						</div>
+						<a href="#"> <img src="{{skin url=images/staticBanner4.jpg}}" alt="" /></a>
+						<p>All sliders are manageble by admin.</p>
+						</div>
+					<!--end slide three--></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Call Us</title>
+                <identifier>call-us</identifier>
+                <content><![CDATA[
+					<div class="f-left call-us"><label>CALL US FREE 24/7:</label>(000) 589-516-5485</div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Top Links</title>
+                <identifier>top-links</identifier>
+                <content><![CDATA[
+					<ul class="top-links staticLink">
+						<li><a title="About Us" href="#">About Us</a><span>|</span></li>
+						<li><a title="FAQs" href="#">FAQs</a><span>|</span></li>
+						<li><a title="Contact" href="#">Contact</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Header Socail Media</title>
+                <identifier>header-social-media</identifier>
+                <content><![CDATA[
+					<ul class="social-media">
+						<li><a title="facebook" href="#"><em class="fa fa-facebook-square">facebook</em></a></li>
+						<li><a title="twitter" href="#"><em class="fa fa-twitter-square">twitter</em></a></li>
+						<li><a title="pinterest" href="#"><em class="fa fa-pinterest-square">pinterest</em></a></li>
+						<li><a title="rss" href="#"><em class="fa fa-rss-square">rss</em></a></li>
+						<li><a title="linkedin" href="#"><em class="fa fa-linkedin-square">linkedin</em></a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Footer - Categories</title>
+                <identifier>footer-categories</identifier>
+                <content><![CDATA[
+					<h3>Categories</h3>
+					<ul>
+					<li><a href="{{store direct_url="store-page"}}">My orders</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My credit slips</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My addresses</a></li>
+					<li><a href="{{store direct_url="store-page"}}">My personal info</a></li>
+					</ul>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Addiotnal Discounts</title>
+                <identifier>addiotnal-discounts</identifier>
+                <content><![CDATA[
+					<h3>GET ADDIOTNAL 30% DISCOUNTS <small>on all orders as our holiday gift for you!</small></h3>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Payment Block</title>
+                <identifier>payment-box</identifier>
+                <content><![CDATA[
+					<div class="f-right"><img src="{{skin url="images/payment.png"}}" alt="" /></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			
+			<item>
+                <title>Call Us 03</title>
+                <identifier>call-us03</identifier>
+                <content><![CDATA[
+					<div class="help-block">We are here to help!<br /> Call us on <span>1300 866 069</span></div>
+				]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+		
+			
+        </blocks>
+    </cms>
+</root>

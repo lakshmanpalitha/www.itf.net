@@ -1,0 +1,214 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+
+<?php $config = Mage::getStoreConfig('mdloption/themesetting'); ?>
+<?php 
+function mdlList ($mdlList) {
+	switch ($mdlList) {
+     case 'column_count':
+       return Mage::getStoreConfig('mdlmagic/product_list/column_count', Mage::app()->getStore()->getId());
+	 break;   
+	}
+}
+?>
+<?php $config = Mage::getStoreConfig('mdloption/headerpan'); ?>
+
+<?php if($config['header-option']==1):?>
+<div class="header-container f-fix mainHeaderPan header-wrapper01">
+    <div class="f-fix header-top">
+     <div class="container">
+            <div class="span6 f-left">
+            	<?php echo $this->getChildHtml('store_language') ?>
+            	<?php echo $this->getChildHtml('currency') ?>
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('call-us')->toHtml() ?>
+            </div>
+            <div class="span6 f-right">
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header-social-media')->toHtml() ?>
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('top-links')->toHtml() ?>
+				<div class="f-right welcome-msg"><?php echo $this->getWelcome() ?></div>
+       	    </div>
+            <div class="clear"></div>
+     </div>
+      </div>
+    <div class="header container">
+      <div class="full-width">
+         <div  class="logo-row f-fix">
+            <!--logo box-->
+            <div class="f-left span3">
+            	 <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                    <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                 <?php endif?>
+            </div>
+            <!--Header right-->
+            <div class="f-right span9">
+				<?php $config = Mage::getStoreConfig('mdloption/catalog_category_search'); ?>
+                <?php if ($config['enable_categories']) :?>
+                <?php echo $this->getChildHtml('topSearchcat')?>
+                <?php else:?>   
+                <?php echo $this->getChildHtml('topSearch')?>
+                <?php endif; ?>
+				<?php echo $this->getChildHtml('cart_header'); ?>
+                <?php echo $this->getChildHtml('topLinks') ?>
+            </div>
+         </div>
+      </div>   
+        <?php echo $this->getChildHtml('topContainer'); ?>
+        <div class="navFull f-fix">
+        	<div class="container"><div class="nav-container"><?php echo $this->getChildHtml('topMenu') ?></div></div>
+        </div>
+    </div>
+</div>
+<?php elseif($config['header-option']==2):?> 
+<div class="header-container f-fix mainHeaderPan header-wrapper02">
+    <div class="f-fix header-top">
+     <div class="container">
+        <div class="f-fix">
+            <?php echo $this->getChildHtml('store_language') ?>
+            <?php echo $this->getChildHtml('currency') ?>
+            <?php echo $this->getChildHtml('cart_header'); ?>
+            <?php echo $this->getChildHtml('topLinks') ?>
+        </div>
+        <div class="clear"></div>
+     </div>
+      </div>
+    <div class="header container">
+      <div class="full-width">
+         <div  class="logo-row f-fix">
+            <!--logo box-->
+            <div class="f-left span3">
+            	 <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                    <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                 <?php endif?>
+            </div>
+            <!--Header right-->
+            <div class="f-right span9">
+                <div class="navFull f-fix">
+                <div class="container">
+                    <div class="f-right search-button"><i class="fa fa-search"></i></div>
+                	<div class="nav-container"><?php echo $this->getChildHtml('topMenu') ?></div>
+                </div>
+                </div>
+
+            </div>
+         </div>
+      </div>
+		   
+    </div>
+
+</div>
+<!--Drop search-->
+<div class="f-fix header-wrapper02">
+	<div class="drop_search container">
+		<?php echo $this->getChildHtml('topContainer'); ?>
+        <?php $config = Mage::getStoreConfig('mdloption/catalog_category_search'); ?>
+        <?php if ($config['enable_categories']) :?>
+        <?php echo $this->getChildHtml('topSearchcat')?>
+        <?php else:?>   
+        <?php echo $this->getChildHtml('topSearch')?>
+        <?php endif; ?>
+	</div>   
+          <!--End drop search--> 
+          
+          <script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery('.search-button').click(function(){
+					jQuery('.search-button').addClass('closeIcon');	
+					jQuery('.drop_search').addClass('drop_search_open');
+				});
+				jQuery('#searchRemove').click(function(){
+					jQuery('.search-button').removeClass('closeIcon');	
+					jQuery('.drop_search').removeClass('drop_search_open');
+				});	
+			});
+		</script>
+</div>
+<?php elseif($config['header-option']==3):?> 
+<div class="header-container f-fix mainHeaderPan header-wrapper03">
+    <div class="f-fix header-top">
+    	 <div class="container">
+            <div class="span3 f-left">
+				<div class="welcome-msg"><?php echo $this->getWelcome() ?></div>
+            </div>
+            <div class="span5">
+                <?php echo $this->getChildHtml('topLinks') ?>
+            </div>
+            <div class="span4">
+            	<?php echo $this->getChildHtml('store_language') ?>
+            	<?php echo $this->getChildHtml('currency') ?>
+       	    </div>
+            <div class="clear"></div>
+	     </div>
+      </div>
+    <div class="header container">
+      <div class="full-width">
+         <div  class="logo-row f-fix">
+            <!--logo box-->
+            <div class="logo-block span4">
+            	 <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                    <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                 <?php endif?>
+            </div>
+            <div class="span6">
+				<?php //echo $this->getLayout()->createBlock('cms/block')->setBlockId('call-us03')->toHtml() ?>
+				<?php $config = Mage::getStoreConfig('mdloption/catalog_category_search'); ?>
+					<?php if ($config['enable_categories']) :?>
+	                    <?php echo $this->getChildHtml('topSearchcat')?>
+    	                <?php else:?>   
+                    <?php echo $this->getChildHtml('topSearch')?>
+                <?php endif; ?>
+            </div>
+
+            <!--Header right-->
+            <div class="span2">
+				<?php echo $this->getChildHtml('cart_header'); ?>
+            </div>
+         </div>
+      </div>   
+        <?php echo $this->getChildHtml('topContainer'); ?>
+        <div class="navFull f-fix">
+        	<div class="container">
+            	<div class="nav-container"><?php echo $this->getChildHtml('topMenu') ?></div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif?>
+
+<?php if ($this->getIsHomePage()):?>
+<div id="myCarousel" class="carousel slide f-fix">
+	<div class="container"><?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/banner.phtml')->toHtml(); ?></div>
+</div>
+<?php endif?>

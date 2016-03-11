@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Mdlb_Mlayer>
+							<title>Mlayer Module</title>
+							<sort_order>10</sort_order>
+						</Mdlb_Mlayer>
+						<system>
+							<children>
+								<config>
+									<children>
+										<mlayer translate="title" module="mlayer"> 
+											<title>Banner Slider Settings</title>
+											<sort_order>50</sort_order>
+										</mlayer>
+									</children>							
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+</config>

@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ * Koolthememaster
+ *
+ * Do not edit or add to this file if you wish to upgrade the to newer versions in the future.
+ * If you wish to customize this module for your needs
+ * Please refer to http://www.magentocommerce.com for more information.
+ * @package   Comming soon page
+ * @version   1.0.0
+ * @copyright Copyright (coffee) 2013 Koolthememaster (http://koolthememaster.net/)
+ */
+#underConstruction_settings .form-list td.value input.input-text, #underConstruction_settings .form-list td.value textarea{
+	width:96%;
+}
+.columns #underConstruction_settings .form-list td.value, #mdloption_navsettings .form-list td.value textarea{
+    width: 550px;
+}

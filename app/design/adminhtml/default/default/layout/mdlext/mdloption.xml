@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+  <default>        
+    <reference name="head">
+      <action method="addJs"><script>bootstrap/jquery-1.8.2.min.js</script></action>
+	  <action method="addJs"><script>bootstrap/jquery-noconflict.js</script></action>
+	  <action method="addJs"><script>bootstrap/mColorPicker.min.js</script></action>
+	  <action method="addJs"><script>bootstrap/jquery.datetimepicker.js</script></action>
+    </reference>
+  </default> 
+</layout>

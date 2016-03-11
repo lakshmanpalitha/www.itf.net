@@ -1,0 +1,191 @@
+<?php 
+    $config = Mage::getStoreConfig('mdloption/home_bestseller');
+    $categoryId = $config['bestseller'];
+	$cObj = Mage::getModel('catalog/category')->load($categoryId);
+	
+	$visibility = array(
+            Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+            Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+        );
+	$productObj = $cObj->getProductCollection()->addAttributeToFilter('visibility', $visibility)->getData();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if($config['bannersetting']):?>
+<?php if(count($productObj)<=0): ?>
+<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+<?php else: ?>
+<div class="headingBox">
+	<h2 class="line_heading"><span><?php echo $this->__('Bestseller Products')?></span></h2>
+</div>
+<div id="mix_container" class="mix_container bestsellerBox rowMin">
+<div class="mix_wrapper">
+<div class="mix_inner">
+  <div class="bestseller" id="owl-demo2">
+	<?php if($config['bestseller_flip_view']==1 && $config['bestseller_flip_view_style']==2):?>
+	     <?php $flipviewStyle='flipView2'; ?>
+	<?php endif; ?>
+      <?php $i=1;foreach($productObj as $_productData): ?>
+      <?php $_product = Mage::getModel('catalog/product')->load($_productData['entity_id']); ?>
+      <div class="item <?php if($config['itemviewbox']==1):?>secondViewInner<?php endif; ?>">
+      	
+          <!--first view-->
+          <?php if($config['itemviewbox']==0):?>
+          	<div class="itemInner <?php echo $flipviewStyle;?>">
+          		<div class="badge">			
+            <?php if($_product->getData('new')){echo '<span class="new"><b>'. $_product->getAttributeText('new').'</b><strong>'.$this->__('new').'</strong></span>';  }?>
+            <?php if($_product->getData('sale')){echo '<span class="sale"><b>'. $_product->getAttributeText('sale').'</b><strong>'.$this->__('sale').'</strong></span>';  }?>
+       </div>
+       	<?php if($config['bestseller_quick_view']==1):?>
+            <a  rel="tooltip" data-placement="top" title="<?php echo $this->__('Quick View')?>" href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox quick_view' id='fancybox<?php echo $_product->getId();?>'><i class="fa fa-search"></i></a>
+       <?php endif; ?> 
+       
+      
+       <?php if($config['bestseller_flip_view']==1):?>
+          <a href="<?php echo $_product->getProductUrl() ?>" class="product-image">
+         <img class="front-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250,300); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"  />
+          <span class="back-img"><img class="hoverImg" src="<?php echo Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(250,300); ?>" alt="<?php echo $this->htmlEscape($_product['name']); ?>" border="0" /></span>
+          </a>
+          <?php else: ?>
+          <a href="<?php echo $_product->getProductUrl() ?>" class="product-image">
+          <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250,300); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+          </a>
+          <?php endif; ?>
+	          </div>
+            <div class="bottomBox"> 
+                    <h2 class="product-name">
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
+                            <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                        </a>
+                    </h2>
+                   	<?php echo $this->getPriceHtml($_product, true, '-right') ?>
+
+                    
+                    <?php if($config['bestseller_quick_view']==1):?>      
+                    <?php if($_product->isSaleable()): ?>
+                    	 <?php if ( !($_product->getTypeInstance(true)->hasRequiredOptions($_product) || $_product->isGrouped()) ): ?>
+                           <button rel="tooltip" data-placement="top" type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><i class="fa fa-shopping-cart"></i><?php //echo $this->__('Add to Cart') ?></span></span></button>
+                         <?php else: ?>
+                           <a rel="tooltip" data-placement="top" title="<?php echo $this->__('Add to Cart') ?>" href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox btn' id='fancybox<?php echo $_product->getId();?>'><i class="fa fa-shopping-cart"></i><?php //echo $this->__('Add to Cart') ?></a>
+                         <?php endif; ?>
+                          
+                    <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                    <?php endif; ?>
+                    
+                    <?php else: ?>
+                     <?php if($_product->isSaleable()): ?>
+                 
+                    <button rel="tooltip" data-placement="top" type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></span></button>
+                 
+                  <?php else: ?>
+                  <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                  <?php endif; ?> 
+                  <?php endif; ?>
+                  <!--end quick view-->
+                  <span class="btn-right">
+                    	
+                         <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                            <a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" title="<?php echo $this->__('Add to Wishlist') ?>" rel="tooltip" data-placement="top" class="link-wishlist"><i class="fa fa-heart"></i></a>
+                        <?php endif; ?>
+                      
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                            <a class="compareR" href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" rel="tooltip" data-placement="top" >
+                            	<i class="fa fa-exchange"></i>
+                            </a>
+                        <?php endif; ?>
+                    </span>
+                  </div>
+                    
+          <?php else: ?> 
+          <!--second view-->
+          	<div class="itemInner sec-view-inner <?php echo $flipviewStyle;?>">
+          	<div class="badge">			
+            <?php if($_product->getData('new')){echo '<span class="new"><b>'. $_product->getAttributeText('new').'</b><strong>'.$this->__('new').'</strong></span>';  }?>
+            <?php if($_product->getData('sale')){echo '<span class="sale"><b>'. $_product->getAttributeText('sale').'</b><strong>'.$this->__('sale').'</strong></span>';  }?>
+       </div>
+      
+       <?php if($config['bestseller_flip_view']==1):?>
+          <a href="<?php echo $_product->getProductUrl() ?>" class="product-image">
+         <img class="front-img" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250,300); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>"  />
+          <span class="back-img"><img class="hoverImg" src="<?php echo Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(250,300); ?>" alt="<?php echo $this->htmlEscape($_product['name']); ?>" border="0" /></span>
+          </a>
+          <?php else: ?>
+          <a href="<?php echo $_product->getProductUrl() ?>" class="product-image">
+          <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250,300); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+          </a>
+         
+          <?php endif; ?>
+          	<span class="btn-eye">
+                 <?php if($config['bestseller_quick_view']==1):?>   	
+                         <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                         
+                        	 <a  rel="tooltip" data-placement="top" title="<?php echo $this->__('Quick View')?>" href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox quick_view' id='fancybox<?php echo $_product->getId();?>'><i class="fa fa-search"></i><?php echo $this->__('quick view') ?></a>
+                               <?php endif; ?> 
+                        <?php endif; ?>
+                    </span>
+           </div>
+          	<div class="bottomBox bottomBox2"> 
+                        <h2 class="product-name">
+                        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>">
+                        <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                        </a>
+                        </h2>
+						<?php echo $this->getPriceHtml($_product, true, '-right') ?>
+                        <div class="buttonox-center">
+                        <?php if($config['bestseller_quick_view']==1):?>       
+                        <?php if($_product->isSaleable()): ?>
+                        <?php if ( !($_product->getTypeInstance(true)->hasRequiredOptions($_product) || $_product->isGrouped()) ): ?>
+                        <button rel="tooltip" data-placement="top" type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
+                        <?php else: ?>
+                        <a rel="tooltip" data-placement="top" title="<?php echo $this->__('Add to Cart') ?>" href='<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox btn' id='fancybox<?php echo $_product->getId();?>'><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></a>
+                        <?php endif; ?>
+                        
+                        <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                        <?php else: ?>
+                        <?php if($_product->isSaleable()): ?>
+                        
+                        <button rel="tooltip" data-placement="top" type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></span></button>
+                        
+                        <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                        <?php endif; ?>
+                        </div>
+                        <a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" title="<?php echo $this->__('Add to Wishlist') ?>" rel="tooltip" data-placement="top" class="link-wishlist"><i class="fa fa-heart"></i> <?php echo $this->__('Add to Wishlist') ?></a>
+                        
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                        <a class="compareR" href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" rel="tooltip" data-placement="top" ><i class="fa fa-exchange"></i> <?php echo $this->__('Add to Compare') ?></a>
+                        <?php endif; ?>
+                    </div>
+          <?php endif; ?>
+      </div>
+          <?php endforeach ?>
+    </div>
+  </div>  
+    <div class="clearfix"></div>
+    <div class=" sliderNab customNavigation">
+         <a class="jcarousel-next prev2"><i class="fa fa-angle-left"></i></a>
+         <a class="jcarousel-prev next2"><i class="fa fa-angle-right"></i></a>
+    </div>
+    </div>  
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function() {     
+        var owl = jQuery("#owl-demo2");
+	    owl.owlCarousel({
+			items : <?php echo $config['bestsellerItem'];?>,
+			itemsMobile : [480,1]
+		});
+		// Custom Navigation Events
+		jQuery(".next2").click(function(){
+			owl.trigger('owl.next');
+		})
+		jQuery(".prev2").click(function(){
+			owl.trigger('owl.prev');
+		})     
+	 });
+</script>
+<?php endif; ?>
+<?php endif; ?>

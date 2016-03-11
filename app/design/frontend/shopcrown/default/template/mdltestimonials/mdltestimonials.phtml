@@ -1,0 +1,73 @@
+<?php
+
+if (Mage::getStoreConfig('mdltestimonials/general/mdltestimonialsenabled') == "1"):         
+    $brandModel = Mage::getModel('mdltestimonials/mdltestimonials')->getCollection()->addFieldToFilter('status', 1);
+    if (count($brandModel) > 0):
+?>
+ <?php if (Mage::getStoreConfig('mdltestimonials/general/mdltestimonialsenabled')=="1") : ?>
+    <?php $config = Mage::getStoreConfig('mdloption/footerpan'); ?>
+		<?php if($config['footer-option']==3):?>
+             <div class="headingBox"><h2 class="line_heading"><span><?php if (Mage::getStoreConfig('mdltestimonials/general/testimonialstitle') != "") echo Mage::getStoreConfig('mdltestimonials/general/testimonialstitle'); ?></span></h2></div>
+        <?php else: ?>
+            <h3 class="line_heading">
+				<?php if (Mage::getStoreConfig('mdltestimonials/general/testimonialstitle') != "") echo Mage::getStoreConfig('mdltestimonials/general/testimonialstitle'); ?>
+    		</h3>  
+        <?php endif; ?>
+    <?php endif; ?>
+
+<div class="mix_wrapper">
+    <div class="mix_container brandbox rowMin">
+    	<div class="pagination">
+         <a class="prev5" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a>
+         <a class="next5" href="javascript:void(0);"><i class="fa fa-angle-right"></i></a>
+    </div>
+      <div id="owl-demo5" class="brandlogo">
+         <?php
+                   $imageUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . "mdltestimonials" ;
+                   foreach ($brandModel as $k => $v) {
+                   $pi = pathinfo($v->getFilename());
+				    if (Mage::getStoreConfig('mdltestimonials/general/mdltestimonialsresizeenabled') == 1) {
+						  $fileThumb = $imageUrl .'/'.$pi['filename'].'_thumb.'.$pi['extension'];	   
+				   } else{
+					     $fileThumb = $imageUrl .'/'.$pi['filename'].'.'.$pi['extension'];
+				}
+				 
+                ?>
+        <div class="testimonialPan">
+         <p>
+         <span class="auther-img"><span><img src="<?php echo $fileThumb; ?>" alt="<?php echo $v->getTitle(); ?>;" /></span></span>
+         <i class="fa fa-quote-left"></i>
+		 <?php echo $v->getContent(); ?>
+         <i class="fa fa-quote-right"></i>
+         </p>        
+         <span class="author"><?php echo $v->getAuthor(); ?></span>      
+         </div>
+        <?php
+       }?>
+      </div>
+      <div class="clearfix"> </div>
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function() {     
+        var owl = jQuery("#owl-demo5");
+	    owl.owlCarousel({
+			<?php if (Mage::getStoreConfig('mdltestimonials/general/enableautoslide')=="1") : ?>
+			autoPlay : true,
+			stopOnHover : true,
+			<?php endif; ?>
+			itemsDesktopSmall : [1024,1],
+			itemsTablet: [768,1],
+			items : 1
+		});
+		// Custom Navigation Events
+		jQuery(".next5").click(function(){
+			owl.trigger('owl.next');
+		})
+		jQuery(".prev5").click(function(){
+			owl.trigger('owl.prev');
+		})     
+	 });
+</script>
+<?php endif; ?>
+<?php endif; ?>
