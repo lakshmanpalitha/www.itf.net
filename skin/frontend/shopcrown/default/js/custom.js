@@ -392,6 +392,7 @@ function menu_open(obj) {
 	
 }
 
+
 function menu_close(obj) {
 	jQuery(obj).removeClass('active');
 	jQuery(obj).children('ul').stop(true,true).fadeOut(300);
