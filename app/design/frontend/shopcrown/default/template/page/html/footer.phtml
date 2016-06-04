@@ -59,7 +59,14 @@
     	<div class="container">
         	<div class="f-fix">
                 <div class="span3">
+                  
+                  
 				<?php echo $this->getLayout()->createBlock('mdltestimonials/mdltestimonials')->setTemplate('mdltestimonials/mdltestimonials.phtml')->toHtml();?>
+                  <div class="linked-plagin" style="margin-bottom:10px; width:300px; overflow: hidden;">
+                    <h3>WE ARE IN LINKEDIN</h3>
+                    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                    <script type="IN/CompanyProfile" data-id="7594443" data-format="inline"></script>
+                  </div>
                 </div>
                 <div class="span3">
                     <h3><?php echo $this->__('Find us on Facebook');?></h3>
@@ -99,8 +106,18 @@
                     </div>
                 </div>
                 <div class="span3">
-                	<h3><?php echo $this->__('Latest Tweets');?></h3>
-					<?php echo $this->getLayout()->createBlock('latesttweet/latesttweet')->setTemplate('creare/latesttweet/blank.phtml')->toHtml(); ?>
+                	<h3><?php //echo $this->__('Latest Tweets');?>FIND US ON GOOGLE
+                  </h3>
+					<?php //echo $this->getLayout()->createBlock('latesttweet/latesttweet')->setTemplate('creare/latesttweet/blank.phtml')->toHtml(); ?>
+
+                  <!-- Place this tag in your head or just before your close body tag. -->
+                  <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>
+
+                  <!-- Place this tag where you want the widget to render. -->
+                  <div class="g-page" data-href="//plus.google.com/u/0/111235109572610746924" data-theme="dark" data-rel="publisher"></div>
+                  
+                  
+                  
                 </div>
                 <div class="span3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('info-box')->toHtml() ?></div>
 			</div>

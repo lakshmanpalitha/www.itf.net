@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shopcrown user guide</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+</head>
+<body>
+<div id="home" class="mainContainer">
+  <h1 class="logo"><img src="images/logo.png" alt="Metrostore" /></h1>
+  <h2 class="aCenter">Static blocks and home page content</h2>
+  <h3 style="color: green; text-align: center; padding: 20px;">All static blocks and home page content are already created when you active theme. </h3>
+  <p style="background: none repeat scroll 0% 0% rgb(64, 64, 64); padding: 10px 25px; color: rgb(255, 255, 255); text-align: center;">if you want to change those static blocks you need to login with you admin panel go to the path: CMS &gt; Static block &gt; here you can edit your statics block as per your requirement.</p>
+ <p style="background: none repeat scroll 0% 0% rgb(64, 64, 64); padding: 10px 25px; color: rgb(255, 255, 255); text-align: center;">Or if you don't active theme and create static block and home page as per your requirement, Please follow the following guide.</p>
+  <h3></h3>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+
+ 
+ <!--row pan-->
+	<div id="nav4" class="rowCommon">
+        	<a href="javascript:void(0)">The HomePage Components</a>
+            <span>4</span>
+    </div>
+    <div class="rowInner">
+    	 <h6 class="heading">This section will help you create a Shopcrown homepage and its components:</h6>
+    <hr/>
+    
+    <h5 class="green">Homepage Setting Up the Page Layout</h5>
+    <h6 class="heading">To set up the layout of the homepage:</h6>
+    <ol>
+    	<li>Go to <strong>CMS</strong> > <strong>Pages</strong> and select <strong class="highlight">Home page</strong> from the list of pages.</li>
+        <li>Select Enabled in the Status drop-down menu.</li>
+        <li>Click the Save Page button.<img src="images/homesetting.png" alt="" /></li>
+        <li>Next step, select Design from the left-hand menu. The following page will appear:<img src="images/homeColumn.png" alt="" /></li>
+        <li>Select 1 column from the Layout drop-down menu.</li>
+        <li>In the Layout Update XML box, either remove the existing content or add the following block type around the existing content:
+        <img src="images/disable.png" alt="" />
+        </li>
+        <li>Click the Save Page button</li>
+    </ol>
+    <h5 class="green">Adding Content</h5>
+    <p>The next small steps will show you how to set up the homepage by breaking the HTML code into different components of pages. First, you will need to open the content editor to enter the HTML.</p>
+    <p class="orange">To add content to your homepage:</p>
+    <ol>
+    	<li>Under <strong>CMS</strong> > <strong>Pages</strong>, select <strong class="highlight">Home page</strong></li>
+        <li>In the left-hand menu, click on <strong class="highlight">Content</strong>.</li>
+        <li>Click onthe Show / Hide Editor button to leave WYSIWYG mode and open the content</li>
+        <img src="images/mode.png" alt="" />
+    </ol>
+    <p>Copy and paste the following code into the content editor to create the homepage:</p>
+    <pre>
+    	&lt;div&gt;{{block type="catalog/product_list" template="catalog/product/home.phtml"}}&lt;/div&gt;
+    </pre>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+    </div>	
+    <!--row pan--> 
+ 
+ 
+ <!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Custom menu</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/customMenu.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>customMenu</strong> for the block title and <strong>customMenu</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+    <pre>
+            &lt;li class="level0 level-top parent customMenu"&gt;&lt;a class="level-top" href="#"&gt;&lt;span&gt;Custom Menu&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class="level0"&gt;
+                &lt;li class="customMenu"&gt;
+                &lt;div class="span3"&gt;
+                &lt;div class="customBlock"&gt;
+                &lt;h2&gt;Custom Heading&lt;/h2&gt;
+                &lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/customblock.jpg'}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="span3"&gt;
+                &lt;div class="customBlock"&gt;
+                &lt;h2&gt;Custom Heading&lt;/h2&gt;
+                &lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/customblock.jpg'}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="span3"&gt;
+                &lt;div class="customBlock"&gt;
+                &lt;h2&gt;Custom Heading&lt;/h2&gt;
+                &lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/customblock.jpg'}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="span3"&gt;
+                &lt;div class="customBlock"&gt;
+                &lt;h2&gt;Custom Heading&lt;/h2&gt;
+                &lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/customblock.jpg'}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit bibendum risus, eget faucibus sapien cursus quis. Integer ultrices tempor sapien, quis mollis elit ornare at. Vestibulum cursus arcu iaculis leo pharetra sit amet sodales orci adipiscing. Vestibulum lectus tortor, scelerisque vel auctor non.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class="customMenu"&gt;
+                &lt;div class="span4"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/theam-img01.jpg'}}" alt="" /&gt;&lt;/a&gt;&lt;/div&gt;
+                &lt;div class="span4"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/staticT3B.jpg'}}" alt="" /&gt;&lt;/a&gt;&lt;/div&gt;
+                &lt;div class="span4"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url='images/staticT3C.jpg'}}" alt="" /&gt;&lt;/a&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+  <!--row pan--> 
+  
+   <!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Custom Tab (Custom tab on product page)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/customTab.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>customTab</strong> for the block title and <strong>customTab</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;div class="customTab"&gt;
+                &lt;div class="customLeft"&gt;
+                &lt;h3&gt;Custom HTML&lt;/h3&gt;
+                &lt;img src="{{skin url='images/customImgleft.jpg'}}" alt="Custom image" /&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nibh elit, a placerat mauris. Sed lobortis porta velit, ultrices mattis nisi accumsan vitae. In tempus laoreet dapibus. Aliquam in gravida est. Sed malesuada felis non ligula rutrum fringilla. Ut imperdiet velit ac ligula viverra quis facilisis quam ullamcorper. Aenean mauris libero, pharetra quis hendrerit vitae, scelerisque et leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet gravida aliquam. Nullam porttitor tellus id quam tincidunt aliquet. Ut scelerisque dictum metus, eget sodales eros semper et. Proin ultrices pharetra massa, et condimentum est fringilla sed. Sed gravida fermentum neque, ac accumsan nisl consequat et. Praesent quam dui, mattis id eleifend et, suscipit eu odio. Suspendisse a mauris orci, at tristique risus. Vestibulum pellentesque, risus at tincidunt lobortis, dui quam tincidunt ligula, vel tristique sapien velit at nisl.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="customRight"&gt;
+                &lt;h3&gt;Custom HTML&lt;/h3&gt;
+                &lt;img src="{{skin url='images/customImgright.jpg'}}" alt="Custom image" /&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nibh elit, a placerat mauris. Sed lobortis porta velit, ultrices mattis nisi accumsan vitae. In tempus laoreet dapibus. Aliquam in gravida est. Sed malesuada felis non ligula rutrum fringilla. Ut imperdiet velit ac ligula viverra quis facilisis quam ullamcorper. Aenean mauris libero, pharetra quis hendrerit vitae, scelerisque et leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet gravida aliquam. Nullam porttitor tellus id quam tincidunt aliquet. Ut scelerisque dictum metus, eget sodales eros semper et. Proin ultrices pharetra massa, et condimentum est fringilla sed. Sed gravida fermentum neque, ac accumsan nisl consequat et. Praesent quam dui, mattis id eleifend et, suscipit eu odio. Suspendisse a mauris orci, at tristique risus. Vestibulum pellentesque, risus at tincidunt lobortis, dui quam tincidunt ligula, vel tristique sapien velit at nisl.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+  <!--row pan-->
+  
+  
+  <!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Product Page static banner</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/produtpagebanner.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>product-static-box</strong> for the block title and <strong>product-static-box</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;div class="sidebarStatic"&gt;&lt;img src="{{skin url='images/product_banner.jpg'}}" alt="" /&gt;&lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+  <!--row pan-->
+  
+  
+   
+  <!--footer static block-->
+  <!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">About links (Footer - About links)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/aboutus.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>about-us-links</strong> for the block title and <strong>about-us-links</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;h3&gt;About us&lt;/h3&gt;
+                &lt;ul&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="shopcrown_about_page"}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="customer-service"}}"&gt;Customer Service&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="last privacy"&gt;&lt;a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="discount"}}"&gt;Discount&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="gift-cards"}}"&gt;Gift Cards&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="my-favorite-products"}}"&gt;My favorite products&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+  <!--row pan--> 
+  
+  
+<!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">New Collections (On home page)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/collection.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>new-collections</strong> for the block title and <strong>new-collections</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;ul class="f-fix"&gt;
+                &lt;li&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/new-collections-img01.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/new-collections-img02.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/new-collections-img03.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/new-collections-img04.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+<!--row pan-->
+
+<!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">About Shopcrown</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/abutus.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>about-block</strong> for the block title and <strong>about-block</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;About Shopcrown&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class="block-content f-block"&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci&lt;br /&gt;tation ullamcorper suscipit lobortis nisl ut aliquip exea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in&lt;br /&gt;vulputa jimmer dar bano te velit esse molestie consequat&lt;/p&gt;
+            &lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+<!--row pan-->
+
+
+<!--row pan-->
+  <div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Social Media</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/social.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>social-link</strong> for the block title and <strong>social-link</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;h3&gt;Follow Us&lt;/h3&gt;
+                &lt;ul class="social-media"&gt;
+                &lt;li&gt;&lt;a class="twitter" title="facebook" href="#"&gt;&lt;em class="fa fa-facebook-square"&gt;&lt;/em&gt;&lt;span&gt;lorem&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="facebook" title="twitter" href="#"&gt;&lt;em class="fa fa-twitter-square"&gt;&lt;/em&gt;&lt;span&gt;lorem&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="facebook" title="pinterest" href="#"&gt;&lt;em class="fa fa-pinterest-square"&gt;&lt;/em&gt;&lt;span&gt;lorem&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="rss" title="rss" href="#"&gt;&lt;em class="fa fa-rss-square"&gt;&lt;/em&gt;&lt;span&gt;lorem&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="linkedin" title="linkedin" href="#"&gt;&lt;em class="fa fa-linkedin-square"&gt;&lt;/em&gt;&lt;span&gt;lorem&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+  </div>
+<!--row pan-->
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Footer - My account</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/myaccount.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>my-account</strong> for the block title and <strong>my-account</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;h3&gt;My account&lt;/h3&gt;
+                &lt;ul&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My orders&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My credit slips&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My addresses&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My personal info&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My vouchers&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My favorite products&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Footer - Information</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/information.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>Information</strong> for the block title and <strong>Information</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;h3&gt;Information&lt;/h3&gt;
+                &lt;ul&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;Specials&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;New products&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;Top sellers&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;Our stores&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Footer - Contact info</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/contactu.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>info-box</strong> for the block title and <strong>info-box</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;h3&gt;Contact Us&lt;/h3&gt;
+                &lt;ul class="footer-info-box"&gt;
+                &lt;li class="hand"&gt;This is Photoshop's version of Lorem Ipsum.&lt;br /&gt;Proin gravida nibh vel velit auctor aliquet.&lt;/li&gt;
+                &lt;li class="contact"&gt;661 662 663&lt;br /&gt;156 147 158&lt;/li&gt;
+                &lt;li class="mail"&gt;info@example.com&lt;br /&gt;office@example.com&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Footer - Bottom Links</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/bottomLinks.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>footer-bottom-links</strong> for the block title and <strong>footer-bottom-links</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;ul class="footer-bottom-links"&gt;
+                &lt;li&gt;&lt;a href="store-page"&gt;Privacy Policy&lt;/a&gt; |&lt;/li&gt;
+                &lt;li&gt;&lt;a href="store-page"&gt;Store Locator&lt;/a&gt; |&lt;/li&gt;
+                &lt;li class="last"&gt;&lt;a href="store-page"&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Static Product Page Links</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/product_detail_bottom.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>static_links</strong> for the block title and <strong>static_links</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;ul class="f-block static-links"&gt;
+                &lt;li&gt;&lt;a title="30days" href="#"&gt;&lt;span&gt;30 days&lt;/span&gt;Put your own content here&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="30days" href="#"&gt;&lt;span&gt;30 days&lt;/span&gt;Put your own content here&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="30days" href="#"&gt;&lt;span&gt;30 days&lt;/span&gt;Put your own content here&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Product Custom Block On Right Side</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/product_right_custom_block.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>product_custom_block</strong> for the block title and <strong>product_custom_block</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+           &lt;ul class="block pro-static-block"&gt;
+                &lt;li&gt;
+                &lt;div class="f-left"&gt;&lt;em class="fa fa-star"&gt;&nbsp;&lt;/em&gt;&lt;/div&gt;
+                &lt;p&gt;There are many variations of passages&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;div class="f-left"&gt;&lt;em class="fa fa-leaf"&gt;&nbsp;&lt;/em&gt;&lt;/div&gt;
+                &lt;p&gt;There are many variations of passages&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;div class="f-left"&gt;&lt;em class="fa fa-dot-circle-o"&gt;&nbsp;&lt;/em&gt;&lt;/div&gt;
+                &lt;p&gt;There are many variations of passages&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;div class="f-left"&gt;&lt;em class="fa fa-umbrella"&gt;&nbsp;&lt;/em&gt;&lt;/div&gt;
+                &lt;p&gt;There are many variations of passages&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;div class="f-left"&gt;&lt;em class="fa fa-gavel"&gt;&nbsp;&lt;/em&gt;&lt;/div&gt;
+                &lt;p&gt;There are many variations of passages&lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Contact Detail( Contact us page )</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/contactDetail.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>contactDetail</strong> for the block title and <strong>contactDetail</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;h2 class="legend"&gt;Address&lt;/h2&gt;
+                &lt;p&gt;&lt;strong&gt;Address:&lt;/strong&gt; 8901 Marmora Road, Glasgow, D04 89GR&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Telephone:&lt;/strong&gt; (800)2345-6789&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Fax:&lt;/strong&gt; (800)2345-6789&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Mail:&lt;/strong&gt; info@kateshop.com&lt;/p&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Contact page (bottom static block)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/staticBlockimg.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>static-contact-block</strong> for the block title and <strong>static-contact-block</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;div class="span4"&gt;&lt;img src="{{skin url="images/static-block.jpg"}}" alt="" /&gt;&lt;/div&gt;
+            &lt;div class="span4"&gt;&lt;img src="{{skin url="images/static-block.jpg"}}" alt="" /&gt;&lt;/div&gt;
+            &lt;div class="span4"&gt;&lt;img src="{{skin url="images/static-block.jpg"}}" alt="" /&gt;&lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Footer 2 links (About us)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/footerAbout.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>footer-static-2</strong> for the block title and <strong>footer-static-2</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;ul class="f-fix footer-bottom-links"&gt;
+                &lt;li class="first"&gt;&lt;a href="glamshop_about_page"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="store-page"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="store-page"&gt;Store Locator&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="store-page"&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="store-page"&gt;Orders and Returns&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="last"&gt;&lt;a href="contacts"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Promotional 3 bottom blocks  - (Bottom blocks with banner)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/bottomStaticBlock.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>promotional_bottom_block_3</strong> for the block title and <strong>promotional_bottom_block_3</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;ul&gt;
+                &lt;li class="span4"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/collection-img01.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="span4"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/collection-img02.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="span4"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/collection-img03.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Promotional 3 Right blocks  -(Right side with banner)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/sideBlock.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>promotional_right_block_3</strong> for the block title and <strong>promotional_right_block_3</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;ul&gt;
+                &lt;li class="f-fix"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/collection-img01.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="f-fix"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/collection-img02.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="f-fix"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/collection-img03.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Promotional 2 bottom blocks  -(Bottom side with banner)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/sideBlock.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>promotional_bottom_block_2</strong> for the block title and <strong>promotional_bottom_block_2</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;ul&gt;
+                &lt;li class="span6"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/sale-img2.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="span6"&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/new-arrivals2.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Promotional 2 Right Blocks  -(Right side with banner)</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/right2block.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>promotional_right_block_2</strong> for the block title and <strong>promotional_right_block_2</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+          &lt;ul&gt;
+                &lt;li&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/sale-img01.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="" href="#"&gt;&lt;img src="{{skin url="images/new-arrivals.jpg"}}" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Block Slide Left</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/bannerSlide.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>block-slide-left</strong> for the block title and <strong>block-slide-left</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;div id="slideLeft"&gt;
+                &lt;!--slide one--&gt;
+                &lt;div class="innerSlids"&gt;
+                &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;4 Types of sliders&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;a href="#"&gt; &lt;img src="{{skin url=images/staticBanner2.jpg}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;All sliders are manageble by admin.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!--end slide one--&gt; 
+                &lt;!--slide two--&gt;
+                &lt;div class="innerSlids"&gt;
+                &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;4 Types of sliders&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;a href="#"&gt; &lt;img src="{{skin url=images/staticBanner3.jpg}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;All sliders are manageble by admin.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!--end slide two--&gt; 
+                &lt;!--slide three--&gt;
+                &lt;div class="innerSlids"&gt;
+                &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;4 Types of sliders&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;a href="#"&gt; &lt;img src="{{skin url=images/staticBanner4.jpg}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;All sliders are manageble by admin.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!--end slide three--&gt;
+            &lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Block Slide Right</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/bannerSlide.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>block-slide-right</strong> for the block title and <strong>block-slide-right</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+            &lt;div id="slideRight"&gt;
+                &lt;!--slide one--&gt;
+                &lt;div class="innerSlids"&gt;
+                &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;4 Types of sliders&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;a href="#"&gt; &lt;img src="{{skin url=images/staticBanner2.jpg}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;All sliders are manageble by admin.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!--end slide one--&gt; 
+                &lt;!--slide two--&gt;
+                &lt;div class="innerSlids"&gt;
+                &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;4 Types of sliders&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;a href="#"&gt; &lt;img src="{{skin url=images/staticBanner3.jpg}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;All sliders are manageble by admin.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!--end slide two--&gt; 
+                &lt;!--slide three--&gt;
+                &lt;div class="innerSlids"&gt;
+                &lt;div class="headingBox"&gt;
+                &lt;h2 class="line_heading"&gt;&lt;span&gt;4 Types of sliders&lt;/span&gt;&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;a href="#"&gt; &lt;img src="{{skin url=images/staticBanner4.jpg}}" alt="" /&gt;&lt;/a&gt;
+                &lt;p&gt;All sliders are manageble by admin.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!--end slide three--&gt;
+            &lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Call Us</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/mobilenumber.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>call-us</strong> for the block title and <strong>call-us</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;div class="f-left call-us"&gt;&lt;label&gt;CALL US FREE 24/7:&lt;/label&gt;(000) 589-516-5485&lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Top Links</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/toplinks.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>top-links</strong> for the block title and <strong>top-links</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;ul class="top-links staticLink"&gt;
+                &lt;li&gt;&lt;a title="About Us" href="#"&gt;About Us&lt;/a&gt;&lt;span&gt;|&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="FAQs" href="#"&gt;FAQs&lt;/a&gt;&lt;span&gt;|&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="Contact" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Header Socail Media</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/socialH.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>header-social-media</strong> for the block title and <strong>header-social-media</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;ul class="social-media"&gt;
+                &lt;li&gt;&lt;a title="facebook" href="#"&gt;&lt;em class="fa fa-facebook-square"&gt;facebook&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="twitter" href="#"&gt;&lt;em class="fa fa-twitter-square"&gt;twitter&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="pinterest" href="#"&gt;&lt;em class="fa fa-pinterest-square"&gt;pinterest&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="rss" href="#"&gt;&lt;em class="fa fa-rss-square"&gt;rss&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title="linkedin" href="#"&gt;&lt;em class="fa fa-linkedin-square"&gt;linkedin&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Footer - Categories</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/footer-category.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>footer-categories</strong> for the block title and <strong>footer-categories</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;h3&gt;Categories&lt;/h3&gt;
+            &lt;ul&gt;
+            &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My orders&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My credit slips&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My addresses&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="{{store direct_url="store-page"}}"&gt;My personal info&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Payment Block</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/payment.png" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>payment-box</strong> for the block title and <strong>payment-box</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;div class="f-right"&gt;&lt;img src="{{skin url="images/payment.png"}}" alt="" /&gt;&lt;/div&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Addiotnal Discounts</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/gift.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>addiotnal-discounts</strong> for the block title and <strong>addiotnal-discounts</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;h3&gt;GET ADDIOTNAL 30% DISCOUNTS &lt;small&gt;on all orders as our holiday gift for you!&lt;/small&gt;&lt;/h3&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+<!--row pan-->
+<div id="" class="rowCommon" style="background:#60829B;"> <a style="background:#60829B; color:#fff;" href="javascript:void(0)">Featured Block</a> </div>
+  <div class="rowInner"> 
+    <!--Contact static content--> 
+    <img src="images/featuredll.jpg" alt="" />
+    <ol>
+      <li>Go to <strong>CMS</strong> > <strong>Static Blocks</strong>. Click the <strong class="highlight">Add New Block button</strong> and enter <strong>featured-block</strong> for the block title and <strong>featured-block</strong> for the identifier.</li>
+      <li> Select Enabled in the Status drop-down menu. Click the <strong class="highlight">Show / Hide Editor button</strong> to leave WYSIWYG mode and open the content editor: and copy this code and paste there </li>
+    </ol>
+    <img src="images/staticBlock.png" alt="" />
+    <p>Copy and paste the following code into the content editor</p>
+        <pre>
+			&lt;ul class="featured-block f-block"&gt;
+                &lt;li class="span3"&gt;&lt;a title="" href="#"&gt;&lt;em class="fa fa-truck"&gt;&lt;/em&gt;&lt;span&gt;Free Shipping above $50&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="span3"&gt;&lt;a title="" href="#"&gt;&lt;em class="fa fa-usd"&gt;&lt;/em&gt;&lt;span&gt;Money back guarantee&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="span3 safe-secure"&gt;&lt;a title="" href="#"&gt;&lt;em class="fa fa-shield"&gt;&lt;/em&gt;&lt;span&gt;Safe &amp; secure shopping&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="span3"&gt;&lt;a title="" href="#"&gt;&lt;em class="fa fa-globe"&gt;&lt;/em&gt;&lt;span&gt;Worldwide Delivery&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    <p class="alert"> :- Here your can change content as per your requirement.<br />
+    </p>
+    <hr/>
+    <!--End Contact static content--> 
+</div>
+<!--row pan-->
+
+
+  
+</div>
+</body>
