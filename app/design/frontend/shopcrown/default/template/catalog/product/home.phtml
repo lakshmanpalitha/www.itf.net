@@ -27,87 +27,54 @@
 
 <div class="tile-banner">
     <div class="span6 tile left-tile tile-a">
-        <a href="http://itfashions.net/index.php/clothing-accessories.html">
-            <h2>T-shirts for software engineers</h2>
+        <a href="http://itfashions.net/catalogsearch/result/?cat=&q=pokemon">
+            <h2>Pokemon GO T-Shirt for Game Lover's</h2>
             <div class="details">
                 <div class="price">20% off</div>
                 <div class="detail-link"><i class="fa fa-eye"></i> View T-Shirt</div>
             </div>
-            <img src="http://itfashions.net/banner_add/it-fashions-im-software-engineer.jpg">
+            <img src="http://itfashions.net/banner_add/pokemon-go-it-fashion-banner.jpg">
         </a>
     </div>
     <div class="span6 right-tile">
         <div class="span6 tile tile-b">
-            <a href="http://itfashions.net/index.php/kitchen-dining-bar.html">
-                <h2>Coffee mug for your working table </h2>
-                <div class="details">
-                    <div class="detail-link"><i class="fa fa-shopping-cart"></i> &nbsp; &nbsp;
-                        Rs. 800.00 Buy Now </div>
-                </div>
-                <img src="http://itfashions.net/banner_add/it-fashions-buy-mug.jpg">
-            </a>
-        </div>
-        <div class="span6 tile tile-c">
-            <a href="http://itfashions.net/index.php/clothing-accessories/eat-sleep-code-man-
-s-t-shirt-17.html">
-                <h2>I'm Feature </h2>
+            <a href="http://itfashions.net/clothing-accessories/web-engineering.html">
+                <h2>T-shirts for web designers </h2>
                 <div class="details">
                     <div class="price">20% off</div>
                     <div class="detail-link"><i class="fa fa-shopping-cart"></i> &nbsp; &nbsp;
                         Rs. 990.00  Buy T-Shirt</div>
                 </div>
-                <img src="http://itfashions.net/banner_add/it-fashions-buy-tshirt.jpg">
+                <img src="http://itfashions.net/banner_add/no-code-no-world-it-fhaion-banner.jpg">
             </a>
         </div>
-
-
-        <div class="span4" style="margin: 0 10px 0 0;">
-            <div class="span12 tile tile-e">
-                <a href="http://itfashions.net/index.php/kitchen-dining-bar.html">
-                    <h2>Coffee mug for your working table </h2>
-                    <div class="details">
-                        <div class="detail-link"><i class="fa fa-coffee"></i> &nbsp; &nbsp;
-                            Find my mug</div>
-                    </div>
-                    <img src="http://itfashions.net/banner_add/it-fashions-mug-design.jpg">
-                </a>
-            </div>
-            <div class="span12 tile tile-f" style="margin:10px 10px 0 0;">
-                <a href="http://itfashions.net/index.php/clothing-accessories/leather-wallet-
-for-men-brown.html">
-                    <h2>Leather Wallet </h2>
-                    <div class="details">
-                        <div class="detail-link"><i class="fa fa-shopping-cart"></i> &nbsp;
-                            &nbsp; Rs. 850.00 Buy Now </div>
-                    </div>
-                    <img src="http://itfashions.net/banner_add/it-fashions-buy-wallet.jpg">
-                </a>
-            </div>
-        </div>
-        <div class="span8 tile tile-d">
-            <a href="#">
-                <h2>T-Shirts for girls </h2>
+        <div class="span6 tile tile-c">
+            <a href="http://itfashions.net/clothing-accessories/software-engineering.html">
+                <h2>T-shirts for software engineers </h2>
                 <div class="details">
-                    <div class="price">25% off</div>
-                    <div class="detail-link"><i class="fa fa-eye"></i> View T-Shirt</div>
+                    <div class="detail-link"><i class="fa fa-eye"></i> Get my One</div>
                 </div>
-                <img src="http://itfashions.net/banner_add/it-fashions-tshirt-for-girls.jpg">
+                <img src="http://itfashions.net/banner_add/no-stress-simple-choice-it-fashion-banner.jpg">
             </a>
         </div>
+
     </div>
 
 </div>
 
 
+<?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/home_product.phtml')->toHtml(); ?>
+
+
 <!--content-->
     <div class="slider-box f-fix">
-		<?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/featured.phtml')->toHtml(); ?>
+		<?php //echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/featured.phtml')->toHtml(); ?>
     </div>
     <div class="slider-box f-fix">
-		<?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/bestseller.phtml')->toHtml(); ?>
+		<?php //echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/bestseller.phtml')->toHtml(); ?>
     </div>
     <div class="slider-box f-fix">
-		<?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/home_product.phtml')->toHtml(); ?>
+		<?php //echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/home_product.phtml')->toHtml(); ?>
     </div>
    <!--end -->
 
