@@ -3028,14 +3028,10 @@ only screen and (min-device-pixel-ratio: 1.5){
 
 
 /* Tile Banner Section */
-.tile-banner {
-}
-
-.tile-banner .tile {
-    position: relative;
-    overflow: hidden;
-}
-
+.tile-banner {} .tile-banner .tile {
+                    position: relative;
+                    overflow: hidden;
+                }
 .tile-banner .tile a img {
     webkit-transform: scale(1, 1);
     -webkit-transition-timing-function: ease-out;
@@ -3044,7 +3040,6 @@ only screen and (min-device-pixel-ratio: 1.5){
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 250ms;
 }
-
 .tile-banner .tile a:hover img {
     -webkit-transform: scale(1.05, 1.07);
     -webkit-transition-timing-function: ease-out;
@@ -3053,7 +3048,6 @@ only screen and (min-device-pixel-ratio: 1.5){
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 250ms;
 }
-
 .tile-banner .tile h2 {
     position: absolute;
     width: 100%;
@@ -3064,17 +3058,14 @@ only screen and (min-device-pixel-ratio: 1.5){
     font-size: 35px;
     display: none;
 }
-
 .tile-banner .tile-d {
     margin: 0px;
 }
-
 .tile-banner .details {
     z-index: 4;
     opacity: 0;
     position: absolute;
 }
-
 .tile-banner .detail-link {
     font-size: 20px;
     color: #fff;
@@ -3084,7 +3075,6 @@ only screen and (min-device-pixel-ratio: 1.5){
     display: table;
     margin: 0 auto;
 }
-
 .tile-banner .price {
     color: #fff;
     font-size: 36px;
@@ -3096,40 +3086,46 @@ only screen and (min-device-pixel-ratio: 1.5){
     background: url(../images/transparent-bg.png);
     margin-bottom: 10px;
 }
-
 .tile-banner .tile.tile-b h2,
 .tile-banner .tile.tile-c h2 {
     font-size: 20px;
 }
-
 .tile-banner .tile.tile-b .detail-link,
 .tile-banner .tile.tile-c .detail-link {
     font-size: 12px;
     padding: 12px;
 }
-
 .tile-banner .tile.tile-d h2 {
     font-size: 30px;
 }
-
 .tile-banner .tile.tile-d .detail-link {
     font-size: 15px;
     padding: 15px;
 }
-
 .tile-banner .tile.tile-e h2,
 .tile-banner .tile.tile-f h2 {
     font-size: 15px;
 }
-
 .tile-banner .tile.tile-e .detail-link,
 .tile-banner .tile.tile-f .detail-link {
     font-size: 10px;
     padding: 10px;
 }
 
+/*//homepage product list*/
+.home-new-product-section .sec-view-inner {
+    border: 1px solid #ddd;
+}
+.home-new-product-section .newProducts li {
+    padding:0px;
+}
 
 
-.catalog-category-view .headingBox + ul{display: none;}
 
-.gs-login.gs-login-checkout li {margin-left: 5px;}
+
+.catalog-category-view .headingBox + ul {
+    display: none;
+}
+.gs-login.gs-login-checkout li {
+    margin-left: 5px;
+}
